@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Roboto:wght@400;500;700;900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto',sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  resize: none;
+  list-style-type: none;
+  text-decoration: none;
+  transition: .3s;
+}
+button{
+  cursor: pointer;
+  border: none;
+}
+.container{
+  max-width: 1180px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+@import "header";
+@import "banner";
+@import "hitSale";
+@import "card";
+@import "footer";
+@import "form";
+@import "product";
+@import "catalog";
