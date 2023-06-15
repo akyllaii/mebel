@@ -1,0 +1,91 @@
+.checkout{
+  padding: 40px 0 102px;
+  &__form{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 300px;
+    margin-top: 50px;
+    row-gap: 60px;
+    &-block{
+      width: calc(50% - 150px);
+    }
+    &-title{
+      font-weight: 500;
+      font-size: 15px;
+      letter-spacing: 0.02em;
+      margin-bottom: 47px;
+    }
+    &-fields{
+      display: flex;
+      flex-direction: column;
+      row-gap: 35px;
+    }
+    &-field{
+      border: none;
+      border-bottom: 1px solid #000000;
+      padding-bottom: 16px;
+      outline: none;
+    }
+    &-list{
+      display: flex;
+      flex-direction: column;
+      row-gap: 30px;
+    }
+    &-item{
+      display: flex;
+      justify-content: space-between;
+      padding: 0 24px;
+      font-weight: 500;
+      font-size: 17px;
+      letter-spacing: 0.02em;
+      &-count{
+        background: #F1EADC;
+        padding: 15px 24px;
+      }
+    }
+    &-label{
+      display: flex;
+      column-gap: 14px;
+      align-items: center;
+      font-weight: 500;
+      font-size: 17px;
+      letter-spacing: 0.02em;
+      input{
+        width: 22px;
+        height: 22px;
+      }
+    }
+    &-btn{
+      font-size: 17px;
+      letter-spacing: 0.02em;
+      color: #FFFFFF;
+      background: #6E9C9F;
+      padding: 22px 50px;
+    }
+    &-commit{
+      border: none;
+      outline: none;
+      padding-bottom: 110px;
+      border-bottom: 1px solid #000000;
+      width: 100%;
+    }
+  }
+  &__popup{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 100;
+    transform: translate(-50%, -50%);
+    background: #6E9C9F;
+    padding: 40px 60px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    border-radius: 15px;
+    &-btn{
+      padding: 10px 20px;
+      background: lightblue;
+      border-radius: 15px;
+    }
+  }
+}

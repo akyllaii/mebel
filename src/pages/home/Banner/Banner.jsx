@@ -1,4 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
+import {useNavigate} from 'react-router-dom'
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -6,6 +7,7 @@ import "swiper/css/navigation";
 import { Navigation,Autoplay } from "swiper";
 
 const Banner = () => {
+    const navigate = useNavigate()
     return (
         <section className="banner">
             <div className="container">
@@ -21,7 +23,7 @@ const Banner = () => {
                             <h2 className="banner__title">loft <br/>
                                 мебель</h2>
                             <p className="banner__text">Современная и удобная мебель в Анапе</p>
-                            <button className="banner__btn">СМОТРЕТЬ КАТАЛОГ</button>
+                            <button onClick={() => navigate('/catalog')} className="banner__btn">СМОТРЕТЬ КАТАЛОГ</button>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
@@ -29,7 +31,7 @@ const Banner = () => {
                             <h2 className="banner__title">loft <br/>
                                 мебель</h2>
                             <p className="banner__text">Современная и удобная мебель в Анапе</p>
-                            <button className="banner__btn">СМОТРЕТЬ КАТАЛОГ</button>
+                            <button onClick={() => navigate('/catalog')} className="banner__btn">СМОТРЕТЬ КАТАЛОГ</button>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
@@ -37,7 +39,7 @@ const Banner = () => {
                             <h2 className="banner__title">loft <br/>
                                 мебель</h2>
                             <p className="banner__text">Современная и удобная мебель в Анапе</p>
-                            <button className="banner__btn">СМОТРЕТЬ КАТАЛОГ</button>
+                            <button onClick={() => navigate('/catalog')} className="banner__btn">СМОТРЕТЬ КАТАЛОГ</button>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
@@ -45,7 +47,7 @@ const Banner = () => {
                             <h2 className="banner__title">loft <br/>
                                 мебель</h2>
                             <p className="banner__text">Современная и удобная мебель в Анапе</p>
-                            <button className="banner__btn">СМОТРЕТЬ КАТАЛОГ</button>
+                            <button onClick={() => navigate('/catalog')}  className="banner__btn">СМОТРЕТЬ КАТАЛОГ</button>
                         </div>
                     </SwiperSlide>
                 </Swiper>

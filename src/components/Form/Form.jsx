@@ -33,10 +33,13 @@ const Form = () => {
 
     const submitForm = (data) => {
         let {confirmPwd, ...user} = data
+
+
         if (location.pathname === '/login') {
             loginUser(user)
         } else {
             registerUser(user)
+            console.log(user)
         }
     }
 
@@ -215,7 +218,6 @@ const Form = () => {
                             </p>
                         </label>
                     }
-
                     <button type='submit' className="form__btn">Login</button>
                 </form>
             </div>

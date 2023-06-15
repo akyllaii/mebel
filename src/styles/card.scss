@@ -36,13 +36,25 @@
       padding: 13px 40px;
       background: #245462;
     }
+    &-count{
+      display: flex;
+      align-items: center;
+      span{
+        font-size: 20px;
+        padding: 0 10px;
+      }
+    }
+    &-minus,&-plus{
+      font-weight: 400;
+      font-size: 13px;
+      color: #FFFFFF;
+      padding: 13px 40px;
+      background: #245462;
+    }
   }
   &:hover{
     background: #FFFFFF;
     box-shadow: 0px 1px 9px rgba(0, 0, 0, 0.11);
-    //.card__sizes{
-    //  display: block;
-    //}
   }
   &__fav{
     position: absolute;

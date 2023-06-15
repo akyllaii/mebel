@@ -43,7 +43,7 @@ const Favorites = () => {
             </section>
         );
     } else {
-        return <h2>Список избранных товаров пуст</h2>
+        return <div className='container'><h2>Список избранных товаров пуст</h2></div>
     }
 };
 

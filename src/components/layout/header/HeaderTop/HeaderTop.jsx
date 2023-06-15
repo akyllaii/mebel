@@ -1,4 +1,4 @@
-
+import React from 'react'
 import {Link} from "react-router-dom";
 import {FiPhone} from 'react-icons/fi'
 import {TbTruckDelivery} from 'react-icons/tb'
@@ -9,7 +9,7 @@ const HeaderTop = () => {
                 <div className="header__top-menu">
                     <Link to={'/'} className="header__top-link">Главная</Link>
                     <Link to={'/about'} className="header__top-link">О нас</Link>
-                    <Link to={'/contact'} className="header__top-link">Контакты</Link>
+                    <Link to={'/catalog'} className="header__top-link">Каталог</Link>
                 </div>
                 <div className="header__top-menu">
                     <a href='tel:8 (964) 89 99 119' className="header__top-tel">
