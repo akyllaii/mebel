@@ -17,6 +17,7 @@ const RangeInput = ({slider,setSlider}) => {
                 onChange={debounce(handleChange, 1000)}
                 valueLabelDisplay="auto"
                 min={0}
+                step={100}
                 max={30000}
             />
         </Box>
