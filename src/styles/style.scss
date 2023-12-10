@@ -22,6 +22,22 @@ button{
   margin: 0 auto;
 }
 
+.skeleton {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: 0.5em;
+  border: 1px solid gray;
+  &__img {
+    margin-top: 10px;
+  }
+  &__block {
+    height: 40px;
+  }
+
+}
+
 @import "header";
 @import "banner";
 @import "hitSale";

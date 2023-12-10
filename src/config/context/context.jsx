@@ -10,6 +10,7 @@ const Context = (props) => {
     const [hitSale, setHitSale] = useState([])
     const [favorites,setFavorites] = useState([])
     const [search,setSearch] = useState('')
+    const [isLoading,setIsLoading] = useState(true)
     const navigate = useNavigate()
 
     const logOutUser = () => {
@@ -76,7 +77,11 @@ const Context = (props) => {
     }
     const getHitSale = () => {
         api('products?_sort=sale&_order=desc&_limit=12').json()
-            .then((res) => setHitSale(res))
+            .then((res) =>
+                {
+                    setHitSale(res)
+                    setIsLoading(false)
+                })
     }
     const addCarts = (product) => {
         api.patch(`users/${user.id}`,{
@@ -127,19 +132,7 @@ const Context = (props) => {
             localStorage.setItem('user', JSON.stringify(res))
         })
     }
-    // const removeCart = (product) => {
-    //     api.patch(`users/${user.id}`,{
-    //         headers: {
-    //             "content-type" : "application/json"
-    //         },
-    //         json: {
-    //             carts: user.carts.filter((item) => item.id !== product.id),
-    //         }
-    //     }).json().then((res) => {
-    //         setUser(res)
-    //         localStorage.setItem('user', JSON.stringify(res))
-    //     })
-    // }
+
     const addOrder = (order,setPopup,redirect) => {
         api.patch(`users/${user.id}`,{
             headers: {
@@ -160,7 +153,7 @@ const Context = (props) => {
 
     let value = {
         user,setUser, registerUser, loginUser, logOutUser, hitSale, getHitSale, favoritesHandler, favorites, search, setSearch,
-        addCarts,addCartsPlus, removeCartsMinus,addOrder
+        addCarts,addCartsPlus, removeCartsMinus,addOrder,isLoading,setIsLoading
     }
 
     return <CustomContext.Provider value={value}>
